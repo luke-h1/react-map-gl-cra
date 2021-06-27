@@ -21,6 +21,9 @@ const App = () => {
       }
     };
     window.addEventListener('keydown', listener);
+    return () => {
+      window.removeEventListener('keydown', listener);
+    };
   }, []);
 
   return (
